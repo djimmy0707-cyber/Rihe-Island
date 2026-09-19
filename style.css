@@ -1,0 +1,1197 @@
+:root {
+  --background: #f6f1e8;
+  --paper: #fffdf8;
+  --cream: #ebe1d2;
+  --cream-dark: #ddd0be;
+  --brown: #756653;
+  --dark: #38332d;
+  --soft: #978a79;
+  --line: #d8cdbd;
+  --white: #ffffff;
+
+  --radius: 24px;
+  --small-radius: 16px;
+}
+
+
+/* =========================
+   基本設定
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Noto Sans TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    sans-serif;
+
+  background: var(--background);
+  color: var(--dark);
+
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 7%;
+
+  background: rgba(246, 241, 232, 0.92);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid
+    rgba(117, 102, 83, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  font-size: 28px;
+  color: var(--brown);
+}
+
+.logo strong {
+  display: block;
+
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+.logo small {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  color: var(--soft);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+nav a {
+  position: relative;
+
+  font-size: 13px;
+  color: var(--brown);
+
+  transition: opacity 0.25s ease;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   首頁 HERO
+========================= */
+
+.hero {
+  min-height: 88vh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(300px, 0.8fr);
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 90px 9%;
+}
+
+.eyebrow,
+.section-heading > p,
+.create-box > p {
+  margin-bottom: 18px;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  color: var(--soft);
+}
+
+.hero h1 {
+  max-width: 800px;
+
+  font-size: clamp(
+    52px,
+    8vw,
+    105px
+  );
+
+  line-height: 1.05;
+
+  font-weight: 500;
+
+  letter-spacing: -4px;
+}
+
+.hero h1 span {
+  color: var(--brown);
+}
+
+.hero-text {
+  margin-top: 35px;
+
+  font-size: 18px;
+
+  color: var(--soft);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 38px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 14px 24px;
+
+  border-radius: 100px;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.secondary {
+  border: 1px solid var(--line);
+
+  color: var(--brown);
+}
+
+
+/* =========================
+   今天的日禾島
+========================= */
+
+.hero-card {
+  padding: 38px;
+
+  background: var(--paper);
+
+  border: 1px solid
+    rgba(117, 102, 83, 0.08);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 20px 60px
+    rgba(75, 63, 50, 0.08);
+}
+
+.hero-card > p {
+  font-size: 10px;
+  letter-spacing: 3px;
+
+  color: var(--soft);
+}
+
+.hero-card h2 {
+  margin: 8px 0 30px;
+
+  font-size: 27px;
+
+  font-weight: 500;
+}
+
+.today-item {
+  display: flex;
+
+  gap: 18px;
+
+  padding: 18px 0;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.today-item > span {
+  width: 30px;
+
+  font-size: 22px;
+
+  color: var(--brown);
+}
+
+.today-item strong {
+  font-size: 14px;
+}
+
+.today-item p {
+  margin-top: 3px;
+
+  font-size: 13px;
+
+  color: var(--soft);
+}
+
+
+/* =========================
+   共用 Section
+========================= */
+
+.section {
+  padding: 110px 9%;
+}
+
+.section-heading {
+  max-width: 850px;
+
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: clamp(
+    38px,
+    5vw,
+    65px
+  );
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+}
+
+.section-heading span {
+  display: block;
+
+  max-width: 650px;
+
+  margin-top: 15px;
+
+  color: var(--soft);
+}
+
+
+/* =========================
+   地點卡片
+========================= */
+
+.place-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.place-card {
+  overflow: hidden;
+
+  background: var(--paper);
+
+  border:
+    1px solid
+    rgba(117, 102, 83, 0.1);
+
+  border-radius: var(--radius);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 50px
+    rgba(75, 63, 50, 0.08);
+}
+
+.place-image,
+.place-placeholder {
+  width: 100%;
+  height: 330px;
+}
+
+
+/* 文創街圖片 */
+
+.creative-street {
+  background:
+    linear-gradient(
+      rgba(60, 50, 40, 0.03),
+      rgba(60, 50, 40, 0.03)
+    ),
+    url("images/creative-street.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+
+/* 還沒有圖片的地點 */
+
+.place-placeholder {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eee5d8,
+      #e3d7c6
+    );
+
+  text-align: center;
+
+  font-size: 12px;
+  letter-spacing: 4px;
+
+  color: var(--soft);
+}
+
+.place-content {
+  padding: 28px;
+}
+
+.tag {
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  color: var(--soft);
+}
+
+.place-content h3 {
+  margin: 8px 0;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+.place-content p {
+  color: var(--soft);
+
+  font-size: 14px;
+}
+
+.place-content button {
+  margin-top: 22px;
+
+  padding: 0;
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: var(--brown);
+}
+
+.place-content button:hover {
+  opacity: 0.55;
+}
+
+.locked {
+  opacity: 0.55;
+}
+
+.locked button {
+  cursor: default;
+}
+
+
+/* =========================
+   文創街
+========================= */
+
+.street-section {
+  background: #eee6da;
+}
+
+.street-info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.street-block {
+  min-height: 280px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    rgba(255, 253, 248, 0.7);
+
+  border-radius: var(--radius);
+
+  border:
+    1px solid
+    rgba(117, 102, 83, 0.1);
+}
+
+.street-block > span {
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: var(--soft);
+}
+
+.street-block h3 {
+  margin-top: auto;
+  margin-bottom: 10px;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.street-block p {
+  color: var(--soft);
+
+  font-size: 14px;
+}
+
+.small-note {
+  margin-top: 40px;
+
+  text-align: center;
+
+  color: var(--soft);
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   飯糰人物區
+========================= */
+
+.character-section {
+  background: #e7ddcf;
+}
+
+.character-box {
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.8fr)
+    minmax(0, 1.2fr);
+
+  gap: 60px;
+
+  align-items: stretch;
+}
+
+.character-photo {
+  min-height: 550px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf8,
+      #eee4d6
+    );
+
+  border-radius: var(--radius);
+
+  border:
+    1px solid
+    rgba(117, 102, 83, 0.1);
+}
+
+.character-photo span {
+  font-size: 38px;
+
+  letter-spacing: 8px;
+
+  color: var(--brown);
+}
+
+.character-info {
+  padding: 15px 0;
+}
+
+.character-description {
+  max-width: 650px;
+
+  white-space: pre-line;
+
+  font-size: 18px;
+
+  color: #5f5549;
+}
+
+.profile-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin: 35px 0;
+}
+
+.profile-grid div {
+  padding: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.4);
+
+  border-radius:
+    var(--small-radius);
+
+  border:
+    1px solid
+    rgba(117, 102, 83, 0.08);
+}
+
+.profile-grid small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--soft);
+}
+
+.profile-grid strong {
+  font-weight: 500;
+}
+
+.timeline-title {
+  margin-top: 45px;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+.timeline-item {
+  display: grid;
+
+  grid-template-columns:
+    100px 1fr;
+
+  padding: 18px 0;
+
+  border-top:
+    1px solid
+    rgba(117, 102, 83, 0.25);
+}
+
+.timeline-item span {
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: var(--soft);
+}
+
+.timeline-item p {
+  font-size: 14px;
+}
+
+.future {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   日禾集
+========================= */
+
+.news-list {
+  border-bottom:
+    1px solid var(--line);
+}
+
+.news {
+  display: grid;
+
+  grid-template-columns:
+    170px 1fr;
+
+  gap: 30px;
+
+  padding: 35px 0;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.news time {
+  color: var(--soft);
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.news span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: var(--soft);
+}
+
+.news h3 {
+  margin: 7px 0;
+
+  font-size: 24px;
+
+  font-weight: 500;
+}
+
+.news p {
+  max-width: 700px;
+
+  color: var(--soft);
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   島嶼檔案
+========================= */
+
+.archive-section {
+  background: var(--paper);
+}
+
+.archive-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.archive-card {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 30px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.archive-card:hover {
+  transform: translateY(-3px);
+
+  background: #faf6ef;
+}
+
+.number {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: var(--soft);
+}
+
+.archive-icon {
+  margin: 50px 0;
+
+  text-align: center;
+
+  font-size: 50px;
+
+  color: var(--brown);
+}
+
+.archive-card h3 {
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+.archive-card p {
+  margin-top: 5px;
+
+  font-size: 13px;
+
+  color: var(--soft);
+}
+
+.archive-card small {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  color: var(--soft);
+}
+
+
+/* =========================
+   島上時間
+========================= */
+
+.time-box {
+  max-width: 850px;
+
+  padding: 45px;
+
+  background: var(--paper);
+
+  border-radius: var(--radius);
+
+  border:
+    1px solid
+    rgba(117, 102, 83, 0.1);
+}
+
+.time-box p {
+  font-size: 18px;
+
+  color: var(--brown);
+}
+
+.time-box p + p {
+  margin-top: 25px;
+
+  color: var(--soft);
+}
+
+
+/* =========================
+   島民共創
+========================= */
+
+.create-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--background),
+      #ebe0d1
+    );
+}
+
+.create-box {
+  max-width: 1000px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.create-box h2 {
+  font-size: clamp(
+    38px,
+    6vw,
+    72px
+  );
+
+  line-height: 1.25;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+}
+
+.create-text {
+  max-width: 550px;
+
+  margin: 30px auto;
+
+  color: var(--soft);
+}
+
+.create-box button {
+  padding: 15px 28px;
+
+  background: var(--dark);
+
+  color: var(--white);
+
+  border: none;
+
+  border-radius: 100px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.create-box button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.85;
+}
+
+
+/* =========================
+   彈出視窗
+========================= */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 500;
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px;
+
+  background:
+    rgba(40, 35, 30, 0.55);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+
+  width: min(
+    600px,
+    100%
+  );
+
+  padding: 45px;
+
+  background: var(--paper);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 30px 80px
+    rgba(30, 25, 20, 0.2);
+}
+
+.close {
+  position: absolute;
+
+  right: 25px;
+  top: 20px;
+
+  border: none;
+
+  background: none;
+
+  font-size: 28px;
+
+  color: var(--soft);
+
+  cursor: pointer;
+}
+
+#modalType {
+  padding-right: 40px;
+
+  color: var(--soft);
+
+  letter-spacing: 2px;
+
+  font-size: 10px;
+}
+
+#modalTitle {
+  margin: 8px 0 20px;
+
+  font-size: 35px;
+
+  font-weight: 500;
+}
+
+#modalDescription {
+  color: var(--soft);
+}
+
+
+/* =========================
+   頁尾
+========================= */
+
+footer {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  align-items: end;
+
+  gap: 30px;
+
+  padding: 60px 9%;
+
+  border-top:
+    1px solid var(--line);
+
+  color: var(--soft);
+}
+
+footer strong {
+  color: var(--dark);
+
+  letter-spacing: 4px;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+footer small {
+  text-align: right;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding:
+      15px 6%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding:
+      80px 7%
+      90px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        52px,
+        16vw,
+        76px
+      );
+
+    letter-spacing: -3px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero-card {
+    padding: 28px;
+  }
+
+  .section {
+    padding:
+      85px 7%;
+  }
+
+  .section-heading h2 {
+    letter-spacing: -1px;
+  }
+
+  .place-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .place-image,
+  .place-placeholder {
+    height: 250px;
+  }
+
+  .street-info {
+    grid-template-columns: 1fr;
+  }
+
+  .street-block {
+    min-height: 230px;
+  }
+
+  .character-box {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .character-photo {
+    min-height: 400px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .news h3 {
+    font-size: 21px;
+  }
+
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-card {
+    min-height: 270px;
+  }
+
+  .time-box {
+    padding: 30px;
+  }
+
+  .create-section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+
+    align-items: start;
+  }
+
+  footer small {
+    text-align: left;
+  }
+
+}
+
+
+/* =========================
+   更小的手機
+========================= */
+
+@media (max-width: 430px) {
+
+  .hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .section {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 53px;
+  }
+
+  .modal-box {
+    padding: 35px 25px;
+  }
+
+}
