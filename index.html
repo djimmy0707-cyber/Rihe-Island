@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>日禾島 Rihe Island</title>
+
+  <meta
+    name="description"
+    content="歡迎來到日禾島。一座與時間一起生活的島。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       導覽列
+  ========================== -->
+  <header class="navbar">
+
+    <a class="logo" href="#home">
+      <span class="logo-mark">△</span>
+
+      <div>
+        <strong>日禾島</strong>
+        <small>RIHE ISLAND</small>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#home">首頁</a>
+      <a href="#explore">探索島嶼</a>
+      <a href="#onigiri">飯糰</a>
+      <a href="#journal">日禾集</a>
+      <a href="#archive">島嶼檔案</a>
+      <a href="#create">島民共創</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         首頁
+    ========================== -->
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          WELCOME TO RIHE ISLAND
+        </p>
+
+        <h1>
+          歡迎來到<br>
+          <span>日禾島。</span>
+        </h1>
+
+        <p class="hero-text">
+          一座與時間一起生活的島。<br>
+          商店會開張，街道會改變，居民也有自己的生活。
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#explore" class="button primary">
+            開始探索
+          </a>
+
+          <a href="#journal" class="button secondary">
+            查看今日島訊
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- 今天的日禾島 -->
+
+      <div class="hero-card">
+
+        <p>ISLAND TODAY</p>
+
+        <h2>今天的日禾島</h2>
+
+
+        <div class="today-item">
+
+          <span>☀</span>
+
+          <div>
+            <strong>島上日常</strong>
+
+            <p>
+              文創街今天也正常營業。
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="today-item">
+
+          <span>◌</span>
+
+          <div>
+            <strong>近期活動</strong>
+
+            <p>
+              島上的季節活動正在準備中。
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="today-item">
+
+          <span>△</span>
+
+          <div>
+            <strong>飯糰去哪裡？</strong>
+
+            <p>
+              今天似乎去了文創街。
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         探索日禾島
+    ========================== -->
+
+    <section class="section" id="explore">
+
+      <div class="section-heading">
+
+        <p>EXPLORE RIHE</p>
+
+        <h2>探索日禾島</h2>
+
+        <span>
+          城市一直都在改變。
+          有些地方你可能去過，
+          有些地方仍等待被發現。
+        </span>
+
+      </div>
+
+
+      <div class="place-grid">
+
+
+        <!-- 文創街 -->
+
+        <article class="place-card featured">
+
+          <div class="place-image creative-street"></div>
+
+          <div class="place-content">
+
+            <span class="tag">
+              SHOPPING · LIFE
+            </span>
+
+            <h3>
+              日禾島文創街
+            </h3>
+
+            <p>
+              集合島民創作、生活選物、
+              咖啡與小型工作室的海邊街區。
+            </p>
+
+            <button onclick="openPlace('creative')">
+              查看地點 →
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Onigiri Market -->
+
+        <article class="place-card">
+
+          <div class="place-placeholder">
+            ONIGIRI MARKET
+          </div>
+
+          <div class="place-content">
+
+            <span class="tag">
+              SHOPPING · BUSINESS
+            </span>
+
+            <h3>
+              Onigiri Market
+            </h3>
+
+            <p>
+              飯糰所經營的第一間商店，
+              也是他的事業起點。
+            </p>
+
+            <button onclick="openPlace('market')">
+              查看地點 →
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 美術館 -->
+
+        <article class="place-card">
+
+          <div class="place-placeholder">
+            RIHE ISLAND MUSEUM
+          </div>
+
+          <div class="place-content">
+
+            <span class="tag">
+              ART · CULTURE
+            </span>
+
+            <h3>
+              日禾島美術館
+            </h3>
+
+            <p>
+              收藏島上的創作，
+              也不定期舉辦島民作品展覽。
+            </p>
+
+            <button onclick="openPlace('museum')">
+              查看地點 →
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 海景站 -->
+
+        <article class="place-card">
+
+          <div class="place-placeholder">
+            SEAVIEW STATION
+          </div>
+
+          <div class="place-content">
+
+            <span class="tag">
+              TRANSPORT · CITY
+            </span>
+
+            <h3>
+              海景站
+            </h3>
+
+            <p>
+              靠近海岸的車站。
+              從這裡可以前往文創街與海邊步道。
+            </p>
+
+            <button onclick="openPlace('station')">
+              查看地點 →
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 電影院 -->
+
+        <article class="place-card">
+
+          <div class="place-placeholder">
+            RIHE CINEMA
+          </div>
+
+          <div class="place-content">
+
+            <span class="tag">
+              CULTURE · MOVIE
+            </span>
+
+            <h3>
+              日禾島電影院
+            </h3>
+
+            <p>
+              島民看電影與分享作品的地方。
+              未來也可能放映來自島外創作者的作品。
+            </p>
+
+            <button onclick="openPlace('cinema')">
+              查看地點 →
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 未探索 -->
+
+        <article class="place-card locked">
+
+          <div class="place-placeholder">
+            ?
+          </div>
+
+          <div class="place-content">
+
+            <span class="tag">
+              UNKNOWN
+            </span>
+
+            <h3>
+              尚未探索
+            </h3>
+
+            <p>
+              日禾島還有很多地方沒有被記錄。
+            </p>
+
+            <button disabled>
+              尚未開放
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         文創街探索
+    ========================== -->
+
+    <section class="section street-section" id="creative-street">
+
+      <div class="section-heading">
+
+        <p>CREATIVE MARKET</p>
+
+        <h2>日禾島文創街</h2>
+
+        <span>
+          靠近海岸的一片生活街區。
+          每一條小巷，都可能藏著還沒被發現的店。
+        </span>
+
+      </div>
+
+
+      <div class="street-info">
+
+        <div class="street-block">
+
+          <span>01</span>
+
+          <h3>文創主街</h3>
+
+          <p>
+            選物、插畫、生活用品與各種島民創作，
+            是第一次來到文創街最容易經過的地方。
+          </p>
+
+        </div>
+
+
+        <div class="street-block">
+
+          <span>02</span>
+
+          <h3>海風巷</h3>
+
+          <p>
+            靠近海邊的小巷。
+            有一些工作室、陶藝店與安靜的小店。
+          </p>
+
+        </div>
+
+
+        <div class="street-block">
+
+          <span>03</span>
+
+          <h3>尚未記錄的街區</h3>
+
+          <p>
+            這裡仍有許多店家，
+            目前還沒有被完整記錄。
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="small-note">
+
+        <p>
+          「不是每一扇門，都需要今天打開。」
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         飯糰
+    ========================== -->
+
+    <section
+      class="section character-section"
+      id="onigiri"
+    >
+
+      <div class="section-heading">
+
+        <p>CHARACTER</p>
+
+        <h2>飯糰</h2>
+
+        <span>
+          一位生活在日禾島上的普通島民，
+          也是正在建立自己事業的店主。
+        </span>
+
+      </div>
+
+
+      <div class="character-box">
+
+        <div class="character-photo">
+
+          <span>
+            飯糰
+          </span>
+
+        </div>
+
+
+        <div class="character-info">
+
+          <p class="character-description">
+
+            飯糰生活在日禾島。
+
+            在經營自己的商店之外，
+            他也會吃飯、旅行、逛街、
+            和朋友見面，
+            過著屬於自己的日常生活。
+
+            而他的事業，
+            也正在跟著這座島一起慢慢成長。
+
+          </p>
+
+
+          <div class="profile-grid">
+
+            <div>
+              <small>居住地</small>
+              <strong>日禾島</strong>
+            </div>
+
+            <div>
+              <small>目前事業</small>
+              <strong>Onigiri Market</strong>
+            </div>
+
+            <div>
+              <small>身份</small>
+              <strong>店主 / 島民</strong>
+            </div>
+
+            <div>
+              <small>近期動態</small>
+              <strong>探索文創街</strong>
+            </div>
+
+          </div>
+
+
+          <h3 class="timeline-title">
+            飯糰的事業紀錄
+          </h3>
+
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+
+              <span>2026</span>
+
+              <p>
+                Onigiri Market
+                第一間門市成立
+              </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+              <span>NOW</span>
+
+              <p>
+                商店持續營運中，
+                新商品與新的計畫也正在出現。
+              </p>
+
+            </div>
+
+
+            <div class="timeline-item future">
+
+              <span>FUTURE</span>
+
+              <p>
+                ？
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         日禾集
+    ========================== -->
+
+    <section class="section" id="journal">
+
+      <div class="section-heading">
+
+        <p>RIHE JOURNAL</p>
+
+        <h2>日禾集</h2>
+
+        <span>
+          沒有人知道記錄者是誰。
+          但島上的大小事，
+          總有人默默留下紀錄。
+        </span>
+
+      </div>
+
+
+      <div class="news-list">
+
+
+        <article class="news">
+
+          <time>
+            2026.09
+          </time>
+
+          <div>
+
+            <span>
+              島嶼生活
+            </span>
+
+            <h3>
+              文創街近期出現不少新的島民作品
+            </h3>
+
+            <p>
+              從插畫、生活選物到小型工作室，
+              文創街最近似乎又多了一些
+              值得注意的角落。
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="news">
+
+          <time>
+            2026.09
+          </time>
+
+          <div>
+
+            <span>
+              商業
+            </span>
+
+            <h3>
+              Onigiri Market
+              準備推出新的期間限定商品
+            </h3>
+
+            <p>
+              店內近期開始出現新的陳列，
+              詳細商品資訊尚未正式公開。
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="news">
+
+          <time>
+            ARCHIVE
+          </time>
+
+          <div>
+
+            <span>
+              城市紀錄
+            </span>
+
+            <h3>
+              今天的新聞，
+              也會成為未來的日禾島歷史
+            </h3>
+
+            <p>
+              商店開幕、活動、展覽、
+              城市改變與居民生活，
+              都會逐漸被保存在這裡。
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         島嶼檔案
+    ========================== -->
+
+    <section
+      class="section archive-section"
+      id="archive"
+    >
+
+      <div class="section-heading">
+
+        <p>ISLAND ARCHIVE</p>
+
+        <h2>島嶼檔案</h2>
+
+        <span>
+          保存曾經出現在日禾島上的
+          商品、物件、作品與城市記憶。
+        </span>
+
+      </div>
+
+
+      <div class="archive-grid">
+
+
+        <div class="archive-card">
+
+          <span class="number">
+            NO.001
+          </span>
+
+          <div class="archive-icon">
+            □
+          </div>
+
+          <h3>
+            Onigiri Market 商品
+          </h3>
+
+          <p>
+            飯糰商店的第一批商品資料。
+          </p>
+
+          <small>
+            販售中
+          </small>
+
+        </div>
+
+
+
+        <div class="archive-card">
+
+          <span class="number">
+            NO.002
+          </span>
+
+          <div class="archive-icon">
+            △
+          </div>
+
+          <h3>
+            海景站紀念物
+          </h3>
+
+          <p>
+            與海景站及周邊地區有關的島嶼物件。
+          </p>
+
+          <small>
+            收藏
+          </small>
+
+        </div>
+
+
+
+        <div class="archive-card">
+
+          <span class="number">
+            NO.003
+          </span>
+
+          <div class="archive-icon">
+            ○
+          </div>
+
+          <h3>
+            文創街作品
+          </h3>
+
+          <p>
+            來自島民創作者的生活小物與作品。
+          </p>
+
+          <small>
+            NEW
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         島上時間
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <p>RIHE TIME</p>
+
+        <h2>時間也在島上流動</h2>
+
+        <span>
+          日禾島不會停留在同一天。
+        </span>
+
+      </div>
+
+
+      <div class="time-box">
+
+        <p>
+
+          商店可能開幕，
+          新的街區可能出現，
+          一場展覽可能結束，
+          飯糰的生活也會繼續往前。
+
+        </p>
+
+        <p>
+
+          今天看到的日禾島，
+          也許和一年後的日禾島完全不同。
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         島民共創
+    ========================== -->
+
+    <section
+      class="section create-section"
+      id="create"
+    >
+
+      <div class="create-box">
+
+        <p>
+          CREATE WITH RIHE
+        </p>
+
+        <h2>
+          有一天，<br>
+          你的作品也可能出現在日禾島。
+        </h2>
+
+        <p class="create-text">
+
+          電影、插畫、商品、展覽與更多創作，
+
+          未來都有機會真正成為
+          這座島的一部分。
+
+        </p>
+
+
+        <button onclick="showComingSoon()">
+
+          島民共創計畫 · Coming Soon
+
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       地點彈出視窗
+  ========================== -->
+
+  <div
+    class="modal"
+    id="placeModal"
+  >
+
+    <div class="modal-box">
+
+      <button
+        class="close"
+        onclick="closeModal()"
+        aria-label="關閉"
+      >
+        ×
+      </button>
+
+
+      <p id="modalType"></p>
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalDescription"></p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       頁尾
+  ========================== -->
+
+  <footer>
+
+    <div>
+
+      <strong>
+        日禾島
+      </strong>
+
+      <p>
+        RIHE ISLAND
+      </p>
+
+    </div>
+
+
+    <p>
+      收集日常，也收集喜歡的自己。
+    </p>
+
+
+    <small>
+      © 2026 Rihe Island
+    </small>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
